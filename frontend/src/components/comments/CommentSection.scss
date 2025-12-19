@@ -1,0 +1,199 @@
+.comment-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eaeaea;
+
+  .comment-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .comment-form {
+    margin-bottom: 30px;
+
+    .comment-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: vertical;
+      margin-bottom: 10px;
+      transition: border-color 0.3s;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+    }
+
+    .comment-submit-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+
+      &:hover:not(:disabled) {
+        background-color: #0056b3;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .comment-login-prompt {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: #666;
+    }
+  }
+
+  .comments-list {
+    .no-comments {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+      padding: 20px;
+    }
+
+    .comment-item {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 3px solid #007bff;
+
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .comment-author {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .author-name {
+            font-weight: 600;
+            color: #333;
+          }
+
+          .author-badge {
+            background-color: #ffc107;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+
+        .comment-date {
+          color: #888;
+          font-size: 14px;
+        }
+      }
+
+      .comment-content {
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 10px;
+
+        .comment-edit {
+          .edit-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            resize: vertical;
+            margin-bottom: 10px;
+          }
+
+          .edit-actions {
+            display: flex;
+            gap: 10px;
+
+            .save-btn, .cancel-btn {
+              padding: 5px 15px;
+              border: none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 14px;
+            }
+
+            .save-btn {
+              background-color: #28a745;
+              color: white;
+
+              &:hover {
+                background-color: #218838;
+              }
+            }
+
+            .cancel-btn {
+              background-color: #6c757d;
+              color: white;
+
+              &:hover {
+                background-color: #5a6268;
+              }
+            }
+          }
+        }
+      }
+
+      .comment-actions {
+        display: flex;
+        gap: 10px;
+
+        .action-btn {
+          padding: 5px 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 12px;
+          transition: background-color 0.3s;
+
+          &.edit-btn {
+            background-color: #ffc107;
+            color: #333;
+
+            &:hover {
+              background-color: #e0a800;
+            }
+          }
+
+          &.delete-btn {
+            background-color: #dc3545;
+            color: white;
+
+            &:hover {
+              background-color: #c82333;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comment-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+}

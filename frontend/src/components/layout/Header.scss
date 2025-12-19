@@ -1,0 +1,236 @@
+@import '../../styles/variables';
+
+.header {
+  background-color: white;
+  box-shadow: $shadow-sm;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &-primary {
+    color: $dark-color;
+  }
+
+  &-secondary {
+    color: $primary-color;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: $gray-color;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* Стиль для кнопки "Создать статью" */
+.create-article-btn {
+  background-color: #28a745;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 20px;
+  transition: all 0.3s;
+  border: none;
+  
+  &:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+
+  &-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+/* Стили для информации о пользователе */
+.user-email {
+  color: #666;
+  font-size: 14px;
+  margin-right: 15px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+/* Блок информации пользователя */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 15px;
+  
+  .user-email {
+    margin-right: 0;
+  }
+  
+  .user-badge {
+    background-color: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+}
+
+/* Стили для кнопки выхода */
+.logout-btn {
+  margin-left: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  
+  &:hover {
+    background: #ff2222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Стили для админ-ссылки */
+.admin-link {
+  position: relative;
+  
+  .admin-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    }
+  }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    
+    .create-article-btn {
+      order: 1;
+      margin: 5px 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .admin-link {
+      order: 2;
+    }
+    
+    .user-info {
+      order: 3;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+      
+      .user-email {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    
+    .logout-btn {
+      order: 4;
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .nav {
+    gap: 0.5rem;
+    
+    .nav-link {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    
+    .btn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,253 @@
+@import '../styles/variables';
+
+.auth-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.auth-card {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: $shadow-md;
+  padding: 2.5rem;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-title {
+  font-size: 2rem;
+  color: $dark-color;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: $gray-color;
+  font-size: 1rem;
+}
+
+.auth-form {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: $dark-color;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: $gray-color;
+  font-size: 0.9rem;
+
+  a {
+    color: $primary-color;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.forgot-link {
+  color: $primary-color;
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-block {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+}
+
+.auth-footer {
+  text-align: center;
+}
+
+.auth-text {
+  color: $gray-color;
+  margin-bottom: 1.5rem;
+}
+
+.auth-link {
+  color: $primary-color;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: $gray-color;
+  font-size: 0.9rem;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #eee;
+  }
+
+  span {
+    padding: 0 1rem;
+  }
+}
+
+.social-login {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-sm;
+  }
+
+  &.google {
+    color: #DB4437;
+    border-color: #DB4437;
+    
+    &:hover {
+      background-color: #DB4437;
+      color: white;
+    }
+  }
+
+  &.github {
+    color: #333;
+    border-color: #333;
+    
+    &:hover {
+      background-color: #333;
+      color: white;
+    }
+  }
+}
+
+/* Сообщения об ошибках */
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c62828;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Кнопка в состоянии загрузки */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Тестовые данные */
+.test-credentials {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+  font-size: 13px;
+  color: #666;
+  
+  div {
+    margin-bottom: 5px;
+    
+    strong {
+      color: #333;
+      margin-right: 5px;
+    }
+  }
+}
+
+/* Разделитель для тестовых данных */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  
+  span {
+    background: white;
+    padding: 0 15px;
+    color: #888;
+    font-size: 13px;
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #eee;
+    z-index: -1;
+  }
+}

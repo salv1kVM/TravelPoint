@@ -1,0 +1,418 @@
+@import '../styles/variables';
+
+.article-detail-page {
+  padding: 2rem 0 4rem;
+
+  .breadcrumbs {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: $gray-color;
+
+    a {
+      color: $gray-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    span {
+      color: $dark-color;
+      font-weight: 500;
+    }
+  }
+
+  .article-header {
+    margin-bottom: 2rem;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    color: $dark-color;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: $light-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .author-name {
+    font-weight: 600;
+    color: $dark-color;
+  }
+
+  .article-date {
+    color: $gray-color;
+    font-size: 0.9rem;
+  }
+
+  .article-stats {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: $gray-color;
+  }
+
+  .article-hero-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .article-content {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+
+  .article-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .article-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .comments-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .comments-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $dark-color;
+  }
+
+  .comment-form {
+    margin-bottom: 2rem;
+  }
+
+  .comment-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  .comment-form-actions {
+    text-align: right;
+  }
+
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .comment-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+  }
+
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+
+  .comment-author {
+    font-weight: 600;
+    color: $dark-color;
+  }
+
+  .comment-date {
+    color: $gray-color;
+    font-size: 0.9rem;
+  }
+
+  .comment-text {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .comment-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .comment-action {
+    background: none;
+    border: none;
+    color: $gray-color;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Добавь в конец файла:
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 14px;
+
+  .breadcrumb-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .breadcrumb-separator {
+    color: #999;
+  }
+
+  .breadcrumb-current {
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+.article-category {
+  margin-bottom: 15px;
+
+  .category-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.article-hero {
+  margin: 30px 0;
+  position: relative;
+
+  .article-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .image-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}
+
+.article-excerpt {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+  border-left: 4px solid #007bff;
+  font-style: italic;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.article-content {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+
+  .article-paragraph {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+
+  .article-tag {
+    background-color: #e9ecef;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #495057;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #dee2e6;
+      cursor: pointer;
+    }
+  }
+}
+
+.article-actions {
+  display: flex;
+  gap: 15px;
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &.btn-like {
+      &.liked {
+        border-color: #ff6b6b;
+        color: #ff6b6b;
+      }
+    }
+
+    .btn-icon {
+      font-size: 16px;
+    }
+
+    .btn-text {
+      font-weight: 500;
+    }
+  }
+}
+
+.author-avatar-default {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.article-date-read {
+  display: flex;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  
+  &.liked {
+    color: #ff6b6b;
+  }
+}
+
+.comments-container {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 60px 0;
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  p {
+    color: #666;
+    font-size: 16px;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
